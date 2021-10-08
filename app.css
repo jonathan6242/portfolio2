@@ -14,13 +14,18 @@ body {
     overflow-x: hidden;
 }
 
+.row {
+    padding: 25px 0;
+    width: 100%;
+}
+
 .container {
     max-width: 75%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 #landing-page {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -205,6 +210,31 @@ body {
     z-index: 300;
     border-radius: 0.1em;
     animation: scrolling 2s 1s ease-in-out infinite;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
+}
+
+.language {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#languages img {
+    width: 50%;
+}
+
+/* Languages */
+.languagerow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @keyframes fadefromtop {
@@ -479,6 +509,7 @@ i[class="fas fa-file-pdf"] {
 
 @media (max-width: 1300px) {
     #main-header .container .left h1 {
+        margin: 0.5em 0;
         font-size: 70px;
     }
 }
@@ -490,16 +521,6 @@ i[class="fas fa-file-pdf"] {
         font-size: 50px;
     }
 }
-
-@media (min-width: 1279) and (max-width: 1281) and (min-height: 790) and (max-height: 810) {
-    #main-header .container .left h1 {
-        font-size: 50px;
-    }
-    .scroll {
-        display: none;
-    }
-}
-
 
 
 
@@ -518,10 +539,11 @@ i[class="fas fa-file-pdf"] {
     }
     #main-header, #main-header .container {
         flex-direction: column;
+        justify-content: space-around;
     }
     .socials {
         margin-left: 0;
-        width: 40%;
+        width: 50%;
         height: 30%;
         order: 2;
         flex-direction: row;
@@ -532,12 +554,11 @@ i[class="fas fa-file-pdf"] {
     }
     #main-header .container .left  {
         width: 90%;
-        margin-bottom: 100px;
+        /* margin-bottom: 6em; */
         flex: 1;
     }
     #main-header .container .left h1 {
-        margin-top: 40px;
-        margin-bottom: 80px;
+        margin: 0.6em 0 0.4em 0; 
         font-size: 60px;
     }
     #main-header .container .left p {
@@ -546,6 +567,7 @@ i[class="fas fa-file-pdf"] {
     }
     .scroll {
         font-size: 15px;
+        margin-bottom: 6em;
     }
     #main-header .container figure {
         flex: 1;
@@ -583,9 +605,15 @@ i[class="fas fa-file-pdf"] {
 
 @media (max-width: 700px) {
     #main-header .container .left h1 {
-        margin-top: 0.5em;
-        margin-bottom: 1em;
+        margin: 1em 0 0.7em 0;
         font-size: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    #main-header .container .left h1 {
+        margin: 1.2em 0;
+        font-size: 40px;
     }
 }
 
@@ -594,9 +622,8 @@ i[class="fas fa-file-pdf"] {
         font-size: 15px;
     }
     #main-header .container .left h1 {
-        margin-top: 0.5em;
-        margin-bottom: 1em;
-        font-size: 35px;
+        margin: 0.5em 0;
+        font-size: 30px;
     }
     #main-header .container .left p {
         font-size: 13px;
@@ -629,6 +656,9 @@ i[class="fas fa-file-pdf"] {
             transform: scale(1.5);
             opacity: 1;
         }
+    }
+    .scroll {
+        display: none;
     }
 }
 
@@ -669,8 +699,7 @@ i[class="fas fa-file-pdf"] {
 
 @media (max-height: 700px) and (max-width: 600px) {
     #main-header .container .left h1 {
-        margin-top: 0.5em;
-        margin-bottom: 1em;
+        margin: 0.5em 0;
         font-size: 30px;
     }
     .scroll {
@@ -689,5 +718,12 @@ i[class="fas fa-file-pdf"] {
 @media (max-width: 285px) {
     #main-header .container figure {
         min-width: 150px;
+    }
+}
+
+@media (min-width: 1180px) and (max-width: 1500px) {
+    #main-header .container .left h1 {
+        margin: 0.5em 0;
+        font-size: 55px;
     }
 }
