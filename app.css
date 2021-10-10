@@ -510,23 +510,26 @@ i[class="fas fa-file-pdf"] {
 
 .wavebackground {
     width: 100%;
+    height: 15%;
     position: absolute;
     bottom: 0;
     display: flex;
     align-items: flex-end;
+    transition: all 300ms ease;
 }
 
 .wavebackground img {
     transform: scaleY(-1);
     width: 100%;
+    height: 100%;
 }
 
 .whitefill {
     position: absolute;
-    bottom: 0;
+    bottom: -2%;
     width: 100%;
     background-color: #fff;
-    height: 0.1%;
+    height: 2.2%;
     margin-top: 10%;
 }
 
@@ -563,6 +566,7 @@ i[class="fas fa-file-pdf"] {
     justify-content: center;
     align-items: center;
     position: relative;
+    min-height: 270px;
 }
 
 .language__img {
@@ -869,7 +873,7 @@ i:hover {
         font-size: 30px;
     }
     #main-header .container .left p {
-        font-size: 13px;
+        font-size: 18px;
     }
     #main-header .container figure {
         min-width: 200px;
@@ -910,7 +914,7 @@ i:hover {
         font-size: 15px;
     }
     #main-header .container figure {
-        min-width: 250px;
+        min-width: 200px;
     }
     .socials {
         width: 70%;
@@ -949,7 +953,7 @@ i:hover {
         display: none;
     }
     #main-header .container .left p {
-        font-size: 15px;
+        font-size: 16px;
     }
     #main-header .container .left  {
         width: 90%;
@@ -968,5 +972,39 @@ i:hover {
     #main-header .container .left h1 {
         margin: 0.5em 0;
         font-size: 55px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .wavebackground {
+        height: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .wavebackground {
+        height: 5%;
+    }
+    .language {
+        width: 50%;
+    }
+    .section__title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wavebackground {
+        height: 3%;
+    }
+    .language {
+        width: 100%;
+    }
+    #main-header .container .left h1 {
+        font-size: 36px;
+    }
+    .section__title {
+        font-size: 28px;
+        padding: 0px 8px;
     }
 }
